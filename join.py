@@ -49,9 +49,7 @@ def displayStudent():
     '''
 
 
-def searchRecord():
-    search_field = input("\nEnter the column name on which you want to search record : ")
-    key = input("\nEnter the value for the search field : ")
+def searchRecord(search_field, key):
     f_obj2 = open('Student_academic.csv', 'r')
     f_obj1 = open('Student_personal.csv', 'r')
     f_reader1 = csv.DictReader(f_obj1)
@@ -156,8 +154,9 @@ while end != 0:
     else:
         print("\nIllegal input !!!")
     end = int(input("\nDo you want to continue ?, If Yes press 1 else press 0\n==>"))'''
-
-searchRecord()
+search_field = input("\nEnter the column name on which you want to search record : ")
+key = input("\nEnter the value for the search field : ")
+searchRecord(search_field, key)
 
 
 
