@@ -54,7 +54,7 @@ def searchRecord():
     except KeyError as e:
         print('\nWrong search field ', e, ' entered !!!')
     f_obj.close()
-    print("\nData updated")
+    
 
 
 def deleteRecord():
@@ -112,7 +112,7 @@ def updateRecord():
     for data in temp:
         f_writer.writerow(data)
     f_obj.close()
-
+    print("\nData updated")
 
 end = 1
 print("===================================================================================")
